@@ -6,6 +6,25 @@ Bundle 'gmarik/vundle'
 
 "Public
 let mapleader = ","
+set fileencodings=utf-8
+set termencoding=utf-8 
+
+set nocompatible
+set autoindent
+set cindent
+set shiftwidth=4
+set tabstop=4
+set expandtab
+filetype plugin on
+
+"turn off expantab for Makefile
+autocmd FileType make setlocal noexpandtab
+
+set nu
+set showmatch
+set ruler
+set incsearch
+set scrolloff=5
 
 "Power-line
 Bundle 'https://github.com/Lokaltog/vim-powerline.git'
