@@ -6,8 +6,11 @@ Bundle 'gmarik/vundle'
 
 "Public
 let mapleader = ","
+set hls
+hi Search term=underline ctermfg=3 guifg=Yellow 
 set fileencodings=utf-8
 set termencoding=utf-8 
+set guifont=Menlo:h16
 
 set nocompatible
 set autoindent
@@ -16,6 +19,15 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 filetype plugin on
+
+set shell=/bin/zsh
+"set guioptions-=r
+"set guioptions-=l
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=b
+set vb t_vb=
 
 "turn off expantab for Makefile
 autocmd FileType make setlocal noexpandtab
@@ -34,6 +46,9 @@ let g:Powerline_symbols='unicode'
 "Solarized
 Bundle 'Solarized'
 
+"desert.vim
+Bundle 'desert.vim'
+
 "Taglist
 Bundle 'taglist.vim'
 
@@ -45,7 +60,7 @@ Bundle 'minibufexpl.vim'
 
 "The-NERD-Commenter
 Bundle 'The-NERD-Commenter'
-let loaded_nerd_comments=1
+let g:loaded_nerd_comments=1
 
 "DoxygenToolkit.vim
 Bundle 'DoxygenToolkit.vim'
@@ -66,6 +81,26 @@ Bundle 'grep.vim'
 
 "Shell
 Bundle 'Shell.vim'
+
+"Identify file encoding
+Bundle 'FencView.vim'
+
+"Conque-Shell
+Bundle 'Conque-Shell'
+
+"vim gdb - pyclewn
+"Bundle 'https://github.com/xieyu/pyclewn'
+let $CLEWNDIR='/Users/haihaot/.vim/bundle/pyclewn/'
+map <C-s> :exe "Cprint " . expand("<cword>") <CR>
+map <S-k> <C-W><Up>
+map <S-j> <C-W><Down>
+map <S-f> <C-W>_
+
+"php.vim-for-php5
+Bundle 'php.vim-for-php5'
+
+"vim-syntax-extra
+Bundle 'https://github.com/justinmk/vim-syntax-extra'
 
 "Color
 syntax on
